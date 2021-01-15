@@ -1,0 +1,1 @@
+Need Flask and SQLAlchemy to run app.py, which has to be run to use the actual web application.
