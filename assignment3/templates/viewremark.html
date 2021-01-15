@@ -1,0 +1,66 @@
+<!--viewremark.html-->
+
+
+{% extends "navbar.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Class Marks</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href= "{{ url_for('static',filename='styles/class-marks.css') }}"> 
+
+</head>
+
+
+<body>
+
+	<p style="text-align: center;"><span style="font-size: 
+      22px;"><strong><span style="color: rgb(255, 255, 255);">Student Feedback for Instructor <font color="red"><b>{{data1}}</b></font></span></strong></span></p>
+	<p style="text-align: center;"><span style="color: rgb(255, 255, 255);"><br></span></p>
+
+	{% for item in data %}
+	<hr>
+  <p><span style="color: rgb(255, 255, 255);">All Re-Grade Requests</span></p>
+
+	<p><strong><span style="color: rgb(255, 255, 255);">
+
+		Request to change grade for Assignment:<br />
+		<font color="red">{{item[2]}}</font>
+		<br />
+    <br />
+
+    By UTORID: <br />
+    <font color="red">{{item[1]}}</font>
+    <br />
+    <br />
+
+    For the reasons stated: <br />
+    <font color="red">{{item[3]}}</font>
+    <br />
+    <br />
+
+	</span></strong></p>
+	{% endfor %}
+  
+</body>
+{% endblock %}
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

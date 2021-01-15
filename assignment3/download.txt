@@ -1,0 +1,2 @@
+pip3 install flask-login
+pip3 install sqlalchemy

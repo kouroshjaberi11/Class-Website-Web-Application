@@ -1,0 +1,31 @@
+{% extends "navbar.html" %}
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+{% block content %}
+<body>
+    <p style="text-align: center;">Welcome <b>{{name}}</b> to the Administration Page</p>
+    <p style="text-align: center;">Listed below are some of your admin power commands:</p>
+    <p style="text-align: center;"><a href="http://127.0.0.1:5000/class-marks">View Class Marks</a></p>
+    <p style="text-align: center;"><a href="http://127.0.0.1:5000/feedback">View Anonymous Feedback</a></p>
+    <p style="text-align: center;"><a href="http://127.0.0.1:5000/viewremark">View Re-Mark Requests</p>
+    <p style="text-align: center;"><a href="http://127.0.0.1:5000/markupdate">Update Student Marks</a></p>
+    <p style="text-align: center;"><a href="http://127.0.0.1:5000/logout">Logout</a></p>
+    <br />
+    <br />
+    <p style="text-align: center;">View Website Contents</p>
+    <p style="text-align: center;"><a href="http://127.0.0.1:5000/lecs">Lectures</a></p>
+    <p style="text-align: center;"><a href="http://127.0.0.1:5000/labs">Labs</a></p>
+    <p style="text-align: center;"><a href="http://127.0.0.1:5000/asign">Assignments</a></p>
+</body>
+
+{% endblock %}
+
+</html>

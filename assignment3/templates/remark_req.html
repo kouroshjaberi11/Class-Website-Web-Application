@@ -1,0 +1,53 @@
+<!-- {% for item in data %}
+
+<br>
+{{item[0]}}
+{{item[1]}}
+
+{% endfor %} -->
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Class Marks</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href= "{{ url_for('static',filename='styles/class-marks.css') }}"> 
+
+</head>
+<body>
+
+<section class="wrapper">
+    <!-- Row title -->
+    <main class="row title">
+      <ul>
+        <li>A1</li>
+        <li>A2</li>
+        <li>A3</li>
+      </ul>
+    </main>
+
+
+    
+
+    <article class="row mlb">
+      <ul>
+        <li>{{item.a1}}</li>
+        <li>{{item.a2}}</li>
+        <li>{{item.a3}}</li>
+      </ul>
+    </article>
+
+    
+
+  </section>
+
+
+  <center>
+  <form action="http://127.0.0.1:5000/remark">
+    <input type="submit" value="Request Re-Mark" />
+  </form>
+  </center>
+    <p><a href="http://127.0.0.1:5000/login-student"><button>Back to Home</button></a></p>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<head>
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/signup.css') }}">
+</head>
+
+<div class="form-style-10">
+<h1>Update Marks</h1>
+
+<form section="/sign-up" method="POST">
+    
+    <div class="inner-wrap">
+        <label>UTORID<input type="text" name="utorid" maxlength="8" required/></label>
+        <label>Which Assingment? (a1, a2 or a3)<input type="text" name="assign" maxlength="2" required/></label>
+        <label>New Mark <input type="number" name="mark" maxlength="3" required/></label>
+    </div>
+
+    <div class="button-section">
+     <input type="submit" name="submit" />
+    </div>
+
+</form>
+</div>

@@ -1,0 +1,124 @@
+ 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01
+Transitional//EN">
+<html>
+<head>
+<title>feed back submission</title>
+<style>
+  table,th,td {
+    border: 1px solid black;
+  }
+  th {
+      padding-top: 2px;
+      padding-right: 2px;
+      padding-left: 2px;
+      padding-bottom: 2px;
+      font-size: 15px;
+      background-color: lightgrey;
+  }
+  td {
+      padding: 10px;
+      background-color: lightgrey;
+  }
+  input {
+    font-size: 14px;
+  }
+  #inpt-box{
+    width: 100px;
+    padding: 5px;
+  }
+  form {
+  width: 50%;
+  border: 3px solid #f1f1f1;
+  }
+ </style>
+</head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<link href= "{{ url_for('static',filename='styles/index.css') }}"
+rel="stylesheet" type="text/css">
+</head>
+<body>
+<! Menu Header > 
+
+<header>
+    <div class="container">
+      <h1 class="pad"></h1>
+
+      <nav>
+        <ul>
+          <li><a href="/login-student">Home</a></li>
+          <li><a href="/s_calendar">Calendar</a></li>
+          <li><a href="/s_news">New News</a></li>
+          <li><a href="https://piazza.com/class/k5l8ww7kz8l6f0">Discussion Board</a></li>
+          <li><a href="/s_schedule">Lectures</a></li>
+          <li><a href="/s_labs">Labs</a></li>
+          <li><a href="/s_assignments">Assignments</a></li>
+          <li><a href="/s_test">Tests</a></li>
+          <li><a href="https://markus.utsc.utoronto.ca/cscb20w20/">Markus</a></li>
+          <li><a href="/s_team">Course Team</a></li>
+          <li><a href="/anon-feedback">Anon Feedback</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <div
+      class="heading">CSCB20 - Introduction to Databases and Web Applications
+  </div>
+<form method = "post">
+    <div style="background-color: #f1f1f1;
+		border:2px solid black;
+		color: darkblue;
+		">
+    <h3 > Submit Anonymous feed back for 
+      <select name="activity">
+  {% for activity in activities %}
+      <option value="{{ activity }}">{{ activity }}</option>
+  {% endfor %}
+</select><br><br>Please Confirm by Typing in Instructor Name (CASE SENSITIVE): <input type="text" name="teach_name"><br><br></h3>
+    </div>
+   
+     <table>
+
+    <tr>
+    <th> What do you like about the instructor teaching?</th>
+    <td><input type="text" name="teaching_feedback"></td>
+    </tr>
+
+    <tr>
+    <th> What do you recommend the instructor to do to improve their teaching?</th>
+    <td><input type="text" name="IMPROVEMENT_FEEDBACK"></td>
+    </tr>
+
+    <tr>
+    <th> What do you like about the labs?</th>
+    <td><input type="text" name="LAB_FEEDBACK"></td>
+    </tr>
+
+<tr>
+    <th> What do you recommend the lab instructors to do to improve their lab teaching?</th>
+    <td><input type="text" name="LAB_IMPROVEMENT_FEEDBACK"></td>
+    </tr>
+
+</table>
+<br>
+ 	<input type ="submit" style = "margin-left: 12%; height:50px; width:500px" name ="Submit" value="Submit">
+    <br>
+    <br>
+</form>
+
+<br>
+<br>
+
+
+<! Footer >
+<div class="footer">
+	<div class="footer-bottom">
+		<b><a href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science" style="color:#686868">Faculty of Computer Science</a>
+		 &copy; Designed by: Kourosh Jaberi and Ali Zaheer
+	</div>
+</div>
+
+</body>
+</html>

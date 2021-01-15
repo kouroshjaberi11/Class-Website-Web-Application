@@ -1,0 +1,55 @@
+{% extends "navbar.html" %}
+
+<!-- {% for item in data %}
+
+<br>
+{{item[0]}}
+{{item[1]}}
+
+{% endfor %} -->
+
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Class Marks</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href= "{{ url_for('static',filename='styles/class-marks.css') }}"> 
+
+</head>
+<body>
+
+<section class="wrapper">
+    <!-- Row title -->
+    <main class="row title">
+      <ul>
+        <li>Username</li>
+        <li>Name</li>
+        <li>A1</li>
+        <li>A2</li>
+        <li>A3</li>
+      </ul>
+    </main>
+
+
+    {% for item in data %}
+
+    <article class="row mlb">
+      <ul>
+        <li>{{item[0]}}</li>
+        <li>{{item[1]}}</li>
+        <li>{{item[3]}}</li>
+        <li>{{item[4]}}</li>
+        <li>{{item[5]}}</li>
+      </ul>
+    </article>
+
+    {% endfor %}
+
+  </section>
+  
+</body>
+</html>
+{% endblock %}

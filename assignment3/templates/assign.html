@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("static/photos/assign.jpg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
+
+<link href= "{{ url_for('static',filename='styles/navbar.css') }}" 
+rel="stylesheet" type="text/css">
+</head>
+
+
+<header>
+    <div class="container">
+      <h1 class="pad"></h1>
+
+      <nav>
+        <ul>
+          <li><a href="http://127.0.0.1:5000/instructor-dash">Dashboard</a></li>
+          <li><a href="http://127.0.0.1:5000/logout">Logout</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+<body>
+	
+
+<div class="bg"></div>
+
+</body>
+
+</html>

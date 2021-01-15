@@ -1,0 +1,23 @@
+<head>
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/signup.css') }}">
+</head>
+
+<div class="form-style-10">
+<h1>Sign Up Now!</h1>
+
+<form section="/sign-up" method="POST">
+    <div class="section"><span>1</span>First Name & Username</div>
+    <div class="inner-wrap">
+        <label>Your Full Name <input type="text" name="name" maxlength="50" required/></label>
+        <label>Username/UTORID <textarea name="username" maxlength="50" required></textarea></label>
+    </div>
+
+    <div class="section"><span>2</span>Password</div>
+        <div class="inner-wrap">
+        <label>Password <input type="password" name="password" maxlength="50" required/></label>
+    </div>
+    <div class="button-section">
+     <input type="submit" name="Sign Up" />
+    </div>
+</form>
+</div>

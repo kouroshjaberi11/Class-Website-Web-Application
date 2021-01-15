@@ -1,0 +1,82 @@
+{% extends "navbar.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Class Marks</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href= "{{ url_for('static',filename='styles/class-marks.css') }}"> 
+
+</head>
+
+
+<body>
+
+	<p style="text-align: center;"><span style="font-size: 
+      22px;"><strong><span style="color: rgb(255, 255, 255);">Student Feedback for Instructor <font color="red"><b>{{data1}}</b></font></span></strong></span></p>
+	<p style="text-align: center;"><span style="color: rgb(255, 255, 255);"><br></span></p>
+
+	{% for item in data %}
+	<hr>
+  <p><span style="color: rgb(255, 255, 255);">Anonymous Feedback Number: {{item[0]}}</span></p>
+
+	<p><strong><span style="color: rgb(255, 255, 255);">
+
+		What do you like about the instructor teaching?<br />
+		<font color="red">{{item[2]}}</font>
+		<br />
+    <br />
+
+    What do you recommend the instructor to do to improve their teaching? <br />
+    <font color="red">{{item[3]}}</font>
+    <br />
+    <br />
+
+    What do you like about the labs? <br />
+    <font color="red">{{item[4]}}</font>
+    <br />
+    <br />
+
+    What do you recommend the lab instructors to do to improve their lab teaching? <br />
+    <font color="red">{{item[5]}}</font>
+    <br />
+    <br />
+
+	</span></strong></p>
+	{% endfor %}
+  
+</body>
+{% endblock %}
+</html>
+
+
+<!-- 
+
+
+<section class="wrapper">
+
+    <main class="row title">
+      <ul>
+        <li>Student Feedback for Instructor {{data1}}</li>
+      </ul>
+    </main>
+
+
+    {% for item in data %}
+
+    <article class="row mlb">
+      <ul>
+        <li>{{item[1]}}</li>
+        <li>Hello world how r u doing today it is very good blah blah bah bah bah</li>
+  
+      </ul>
+    </article>
+
+    {% endfor %}
+
+  </section>
+
+
+-->

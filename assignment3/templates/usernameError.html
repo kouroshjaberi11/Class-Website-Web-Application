@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<title>Error - Username already exists</title>
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,700" rel="stylesheet">
+
+	<!-- Custom stlylesheet -->
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/usernameError.css') }}">
+
+</head>
+
+<body>
+
+	<div id="notfound">
+		<div class="notfound">
+			<div class="notfound-404">
+				<h1>Oops!</h1>
+				<h2>THE <font color="red"><b>USERNAME</b></font> ALREADY EXISTS</h2>
+			</div>
+			<a href="http://127.0.0.1:5000/sign-up">Go Back to Sign-Up</a>
+		</div>
+	</div>
+
+</body>
+
+</html>
