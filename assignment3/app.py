@@ -198,7 +198,7 @@ def logout():
 @app.route("/class-marks")
 def class_marks():
 	if 'instructor_dash' in session:
-		c = sqlite3.connect('assignment3.db')
+		c = sqlite3.connect('C:\\Users\\HP\\Downloads\\Web Application\\assignment3\\assignment3.db')
 		cur = c.cursor()
 		cur.execute("SELECT * FROM Student")
 		test = cur.fetchall()
@@ -218,7 +218,7 @@ def anon_feedback():
 		use = name.username
 		t = str(use)
 
-		c = sqlite3.connect('assignment3.db')
+		c = sqlite3.connect('C:\\Users\\HP\\Downloads\\Web Application\\assignment3\\assignment3.db')
 		cur = c.cursor()
 		cur.execute('SELECT * FROM Feedback WHERE username=(?)', (t,))
 		test = cur.fetchall()
@@ -277,7 +277,7 @@ def q():
 def view_remark():
 	if 'instructor_dash' in session:
 
-		c = sqlite3.connect('assignment3.db')
+		c = sqlite3.connect('C:\\Users\\HP\\Downloads\\Web Application\\assignment3\\assignment3.db')
 		cur = c.cursor()
 		cur.execute("SELECT * FROM Regrade")
 		test = cur.fetchall()
@@ -374,7 +374,7 @@ def feed_back():
 	# db.session.commit()
 	# return 'feedback added'
 
-	c = sqlite3.connect('assignment3.db')
+	c = sqlite3.connect('C:\\Users\\HP\\Downloads\\Web Application\\assignment3\\assignment3.db')
 	cur = c.cursor()
 	cur.execute("SELECT name FROM Instructor")
 	test = cur.fetchall()
